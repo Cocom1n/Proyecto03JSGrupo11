@@ -1,5 +1,7 @@
 //hacer inport de sus escenas
 import { menu } from "./escenas/menu.js";
+import { win } from "./escenas/win.js";
+
 
 let config ={
     type: Phaser.CANVAS,
@@ -11,7 +13,7 @@ let config ={
         height: 600
     },
     //aqui agregar sus escenas
-    scene:[menu]
+    scene:[menu, win]
 
 }
 let game = new Phaser.Game(config);
