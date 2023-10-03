@@ -2,13 +2,13 @@ class level2 extends Phaser.Scene{
     constructor(){
         super("level2");
         this.platformsl2 = null;
-        this.score = 0;
         this.scoreText = "";
     }
 
     init(data)
     {
         this.score = data.puntaje;
+        this.score = 0;
     }
     preload(){
         this.load.image('backgroundlvl2','../public/img/level2/background-lvl2.png');
