@@ -2,6 +2,7 @@
 import { menu } from "./escenas/menu.js";
 import { perdiste } from "./escenas/perdiste.js";
 import Escena1 from "./escenas/escenas1.js";
+import level2 from "./escenas/level2.js";
 import { win } from "./escenas/win.js";
 
 let config ={
@@ -20,7 +21,7 @@ let config ={
             },
 
     //aqui agregar sus escenas
-    scene:[menu, Escena1, perdiste, win]
+    scene:[menu, Escena1, level2, perdiste, win]
 
 }
 let game = new Phaser.Game(config);
