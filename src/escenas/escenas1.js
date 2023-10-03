@@ -106,6 +106,10 @@ puntaje=0;
             this.puntaje += 10;
             this.puntajeText.setText('Puntaje: ' + this.puntaje);
             
+            if (this.puntaje >= 250) {
+                this.scene.start ('level2');
+            }      
+
         //bombas
             if (this.stars.countActive(true) === 0) {
             this.stars.children.iterate(function (child) {
@@ -116,9 +120,7 @@ puntaje=0;
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-             if (this.puntaje >= 250) {
-                this.scene.start ('level2');
-            }      
+          
     }
 }
     
