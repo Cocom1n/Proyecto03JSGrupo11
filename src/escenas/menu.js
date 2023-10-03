@@ -4,10 +4,11 @@ export class menu extends Phaser.Scene {
     }
   
     preload() {
-      this.load.image('fondo-cielo', '../../public/img/fondo-cielo.png');
-      this.load.image('boton1', '../../public/img/boton.png');
-      this.load.audio('musica-menu','../../public/sonido/musica-menu.mp3');
-      this.load.spritesheet('dude-baile', '../../public/img/sprite-menu.png', { frameWidth: 32, frameHeight: 48 });
+      this.load.image('fondo-cielo', '../public/img/fondo-cielo.png');
+      this.load.image('boton1', '../public/img/boton.png');
+      this.load.audio('musica-menu','../public/sonido/musica-menu.mp3');
+      this.load.spritesheet('dude-baile', '../public/img/sprite-menu.png', { frameWidth: 32, frameHeight: 48 });
+
     }
   
     create() {
@@ -45,8 +46,9 @@ export class menu extends Phaser.Scene {
       this.botoninicio = this.add.image(400,400,'boton1').setInteractive();
       this.botoninicio.on('pointerdown', () =>{
         console.log("hola");
+
         //cambiar el nombre de la escena a la que tiene q cambiar owo
-        this.scene.start('Perdiste');
+        this.scene.start('Escena1');
       });
 
     }
