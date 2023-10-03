@@ -16,7 +16,7 @@ export class perdiste extends Phaser.Scene {
         this.btn_repetir.on('pointerdown', () =>{
             console.log("hola");
             //cambiar el nombre de la escena a la que tiene q cambiar owo
-            this.scene.start('menu');
+            this.scene.start('Escena1');
         });
 
         this.btn_menu = this.add.image(600,400,'btn_menu').setInteractive();

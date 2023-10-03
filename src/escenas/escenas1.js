@@ -12,7 +12,7 @@ puntaje=0;
     this.load.image('ground','../public/img/platform.png');
     this.load.image('star','../public/img/star.png');
     this.load.image('bomb','../public/img/bomb.png'); 
-    this.load.spritesheet('dude','../public/img/dude.png',{frameWidth:32,frameheigt:48});   
+    this.load.spritesheet('dude','../public/img/dude.png',{frameWidth:32,frameHeight:48});   
     }
 
     create(){
@@ -127,7 +127,7 @@ puntaje=0;
         this.physics.pause();
         player.setTint(0xff0000);
         player.anims.play('turn');
-       // this.scene.start(' nombre de la escena gameover');  
+        this.scene.start('Perdiste');  
     }
 }
 export default Escena1 
