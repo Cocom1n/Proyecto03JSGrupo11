@@ -116,8 +116,8 @@ puntaje=0;
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-             if (this.puntaje >= 160) {
-                this.scene.start('level2');
+             if (this.puntaje >= 250) {
+                this.scene.start ('level2');
             }      
     }
 }
