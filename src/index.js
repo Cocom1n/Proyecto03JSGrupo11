@@ -2,7 +2,7 @@
 import { menu } from "./escenas/menu.js";
 import { perdiste } from "./escenas/perdiste.js";
 import Escena1 from "./escenas/escenas1.js";
-
+import { win } from "./escenas/win.js";
 
 let config ={
     type: Phaser.CANVAS,
@@ -20,8 +20,7 @@ let config ={
             },
 
     //aqui agregar sus escenas
-
-    scene:[menu, Escena1, perdiste]
+    scene:[menu, Escena1, perdiste, win]
 
 }
 let game = new Phaser.Game(config);
