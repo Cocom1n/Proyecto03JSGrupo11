@@ -12,7 +12,7 @@ let config ={
         height: 600
     },
     //aqui agregar sus escenas
-    scene:[perdiste, menu]
+    scene:[menu, perdiste]
 
 }
 let game = new Phaser.Game(config);

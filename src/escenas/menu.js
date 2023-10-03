@@ -46,7 +46,7 @@ export class menu extends Phaser.Scene {
       this.botoninicio.on('pointerdown', () =>{
         console.log("hola");
         //cambiar el nombre de la escena a la que tiene q cambiar owo
-        this.scene.start('menu');
+        this.scene.start('Perdiste');
       });
 
     }
