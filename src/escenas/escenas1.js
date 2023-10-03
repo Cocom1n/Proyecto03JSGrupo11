@@ -103,7 +103,7 @@ puntaje=0;
           //Colisión jugador y estrellas
           collectStar(player, star) {
             star.disableBody(true, true);
-            this.score += 10;
+            this.puntaje += 10;
             this.puntajeText.setText('Puntaje: ' + this.puntaje);
             
         //bombas
@@ -116,13 +116,13 @@ puntaje=0;
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-            }
+             if (this.puntaje >= 160) {
+                this.scene.start('level2');
+            }      
+    }
 }
     
-    //metodo para q se gane :y
-
-
-
+   
     hitBomb(player, bomb) {
         this.physics.pause();
         player.setTint(0xff0000);
