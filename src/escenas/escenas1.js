@@ -108,6 +108,10 @@
         this.puntaje += 10;
         this.puntajeText.setText('Puntaje: ' + this.puntaje);
         
+        if (this.puntaje >= 160) {
+            this.scene.start('level2');
+        }  
+        
         //bombas
         if (this.stars.countActive(true) === 0) {
             this.stars.children.iterate(function (child) {
