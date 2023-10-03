@@ -103,16 +103,18 @@
     }
 
 
-          //Colisión jugador y estrellas
-          collectStar(player, star) {
-            star.disableBody(true, true);
-            this.puntaje += 10;
-            this.puntajeText.setText('Puntaje: ' + this.puntaje);
-            
-            if (this.puntaje >= 250) {
-                this.scene.start ('level2');
-            }      
-
+    //Colisión jugador y estrellas
+    collectStar(player, star) {
+        star.disableBody(true, true);
+        this.puntaje += 10;
+        this.puntajeText.setText('Puntaje: ' + this.puntaje);
+        
+        if (this.puntaje >= 160) {
+            let puntajeAPasar = this.puntaje;
+            this.puntaje = 0;
+            this.scene.start('level2', {puntaje: puntajeAPasar});
+        }  
+        
         //bombas
         if (this.stars.countActive(true) === 0) {
             this.stars.children.iterate(function (child) {
