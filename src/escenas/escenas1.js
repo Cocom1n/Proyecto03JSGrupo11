@@ -103,7 +103,7 @@ puntaje=0;
           //Colisión jugador y estrellas
           collectStar(player, star) {
             star.disableBody(true, true);
-            this.score += 10;
+            this.puntaje += 10;
             this.puntajeText.setText('Puntaje: ' + this.puntaje);
             
         //bombas
