@@ -3,6 +3,13 @@ export class perdiste extends Phaser.Scene {
         super({ key: 'Perdiste' });
     }
 
+    init(data) {
+        if (data.puntaje != undefined)
+            this.puntaje = data.puntaje;
+        else
+            this.puntaje = -1;
+    }
+
     preload() {
         this.load.image('perdiste-img', '../../public/img/perdiste_image.png');
         this.load.image('btn_repetir', '../../public/img/btn_repetir.png');
@@ -11,7 +18,9 @@ export class perdiste extends Phaser.Scene {
 
     create() {
         this.add.image(400,150,'perdiste-img');
-        //Display.Color(new Color(255, 255, 255, 255));
+        let puntuacionTexto = 'Puntuacion: ' + this.puntaje;
+        this.end_puntuacion_txt = this.add.text(350, 250, puntuacionTexto, { font: '"Press Start 2P"', color: '#FF7000'});
+        this.end_puntuacion_txt.scale = 2;
         this.btn_repetir = this.add.image(200,400,'btn_repetir').setInteractive();
         this.btn_repetir.on('pointerdown', () =>{
             console.log("hola");
