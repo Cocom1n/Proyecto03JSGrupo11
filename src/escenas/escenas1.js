@@ -109,7 +109,9 @@
         this.puntajeText.setText('Puntaje: ' + this.puntaje);
         
         if (this.puntaje >= 160) {
-            this.scene.start('level2');
+            let puntajeAPasar = this.puntaje;
+            this.puntaje = 0;
+            this.scene.start('level2', {puntaje: puntajeAPasar});
         }  
         
         //bombas

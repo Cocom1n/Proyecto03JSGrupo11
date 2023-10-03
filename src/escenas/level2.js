@@ -5,6 +5,11 @@ class level2 extends Phaser.Scene{
         this.score = 0;
         this.scoreText = "";
     }
+
+    init(data)
+    {
+        this.score = data.puntaje;
+    }
     preload(){
         this.load.image('backgroundlvl2','../public/img/level2/background-lvl2.png');
         this.load.image('platform1-lvl2','../public/img/level2/platform1-lvl2.png');
@@ -154,7 +159,9 @@ class level2 extends Phaser.Scene{
         this.physics.pause();
         player.setTint(0xff0000);
         player.anims.play('turn');
-        this.scene.start('Perdiste');
+        let puntajeAPasar = this.score;
+        this.score = 0;
+        this.scene.start('Perdiste', {puntaje: puntajeAPasar});
     }
 }
 
